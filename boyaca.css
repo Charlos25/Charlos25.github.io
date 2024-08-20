@@ -1,0 +1,124 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+.wrap{
+    width: 1100px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: #1d1d60;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding-top: 20px;
+}
+
+.tarjeta-wrap{
+   margin: 10px;
+   -webkit-perspective: 750;
+   perspective: 750;
+}
+
+.tarjeta{
+    width: 300px;
+    height: 350px;
+    background: #1d1d60;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.7s ease;
+    -webkit-box-shadow: 0px 10px 15px -5px; rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 10px 15px -5px; rgba(0,0,0,0.65);
+    box-shadow: 0px 10px 15px -5px; rgba(0,0,0,0.65);;
+    
+}
+
+.c-tarjeta{
+    background: #0cef90;
+}
+.adelante, .atras{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.adelante{
+    width: 100%;
+}
+
+.atras{
+    transform: rotateY(180deg);
+    padding: 15px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #fff;
+    font-family: "open sans";
+    
+
+}
+
+.tarjeta-wrap:hover .tarjeta{
+    transform: rotateY(180deg);
+
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #fff;
+    font-family: "open sans";
+}
+
+/* tarjetas Boyacá */
+.card1{
+    background-image: url(img/card1.png);
+    background-size: cover;
+}
+.card2{
+    background-image: url(img/card2.png);
+    background-size: cover;
+
+}
+.card3{
+    background-image: url(img/card3.png);
+    background-size: cover;
+}
+.card4{
+    background-image: url(img/card4.png);
+    background-size: cover;
+}
+
+.card5{
+    background-image: url(img/card5.png);
+    background-size: cover;
+}
+
+/* tarjetas Cundinamarca */
+
+.c-card1{
+    background-image: url(img/c-card1.png);
+    background-size: cover;
+}
+.c-card2{
+    background-image: url(img/c-card2.png);
+    background-size: cover;
+
+}
+.c-card3{
+    background-image: url(img/c-card3.png);
+    background-size: cover;
+}
+.c-card4{
+    background-image: url(img/c-card4.png);
+    background-size: cover;
+}
+
