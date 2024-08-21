@@ -28,7 +28,7 @@ body{
 }
 .slader{
     height: 300px;
-    z-index: 2;
+    position: absolute;
 }
 .nav.navbar.navbar-expand-lg{
     background-color: var(--bs-tertiary-bg-rgb);
