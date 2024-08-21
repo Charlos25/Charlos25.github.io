@@ -12,12 +12,17 @@ body{
     margin: auto;
 }
 .heard{
-    border: solid black 2px;
+    width: 1600px;
+    height: 200px;
+    border: solid black 20px;
+    align-items: center;
     
 
 }
 .baner{
     width: 100%;
+    max-width: 1600px;
+    margin: auto;
     height: 200px;
 }
 .slader{

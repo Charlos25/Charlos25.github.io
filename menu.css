@@ -1,0 +1,76 @@
+*{
+margin: 0;
+padding: 0;
+
+}
+
+.body-menu{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-image: url(./img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+
+    
+}
+
+ul{
+
+    list-style: none;
+    top: 70px;
+    position: absolute;
+    width: 100%;
+
+}
+
+img{
+    width: 40px;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+nav{
+    background-color: rgba(63, 235, 41, 0.3);
+    width: 350px;
+    height: 100%;
+    left: -350px;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+input[type="checkbox"]:checked ~ nav
+{ 
+    transform: translateX(350px);
+
+}
+
+a{
+    display: block;
+    padding: 20px 5px ;
+    color: white;
+    transition: all 0.3s;
+}
+
+a:hover{
+    background-color: rgb(204, 255, 217);
+    color: black;
+    font-size: 20px;
+    padding: 25px 7px ;
+}
+label{
+
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+
+}
