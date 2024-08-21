@@ -1,5 +1,6 @@
 @import "boyaca.css";
 @import "mapa.css";
+@import "menu.css";
 body{
     background-color: rgb(228, 243, 218);
     margin: 0px;
@@ -27,6 +28,7 @@ body{
 }
 .slader{
     height: 300px;
+    z-index: 2;
 }
 .nav.navbar.navbar-expand-lg{
     background-color: var(--bs-tertiary-bg-rgb);

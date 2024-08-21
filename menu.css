@@ -40,12 +40,13 @@ input[type="checkbox"]{
 }
 
 nav{
-    background-color: rgba(63, 235, 41, 0.3);
+    background-color: rgba(63, 235, 41, 0.5);
     width: 350px;
     height: 100%;
     left: -350px;
     position: absolute;
     transition: all 0.5s;
+    z-index: 0;
 }
 
 input[type="checkbox"]:checked ~ nav
@@ -57,12 +58,14 @@ input[type="checkbox"]:checked ~ nav
 a{
     display: block;
     padding: 20px 5px ;
-    color: white;
+    font-size: 18px;
+    color: rgb(1, 59, 1);
+    border-radius: 20px;
     transition: all 0.3s;
 }
 
 a:hover{
-    background-color: rgb(204, 255, 217);
+    background-color: rgb(250, 147, 79,0.5);
     color: black;
     font-size: 20px;
     padding: 25px 7px ;
@@ -73,4 +76,12 @@ label{
     position: absolute;
     z-index: 1;
 
+}
+
+.dropdown-menu{
+    background-color: rgba(63, 235, 41, 0.3);
+    width: 350px;
+    height: 160px;
+    border: none;
+   
 }
