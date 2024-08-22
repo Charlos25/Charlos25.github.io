@@ -40,18 +40,19 @@ input[type="checkbox"]{
 }
 
 nav{
-    background-color: rgba(63, 235, 41, 0.5);
+    background-color: rgba(231, 250, 229, 0.9);
     width: 350px;
     height: 100%;
-    left: -350px;
+    left: -6000px;
     position: absolute;
-    transition: all 0.5s;
+    transition: all 0s;
     z-index: 0;
+    border-radius: 20px;
 }
 
 input[type="checkbox"]:checked ~ nav
 { 
-    transform: translateX(350px);
+    transform: translateX(6000px);
 
 }
 
@@ -74,14 +75,18 @@ label{
 
     padding: 15px;
     position: absolute;
+    position: relative;
     z-index: 1;
 
 }
 
 .dropdown-menu{
-    background-color: rgba(63, 235, 41, 0.3);
+    background-color: rgba(231, 250, 229, 0.9);;
     width: 350px;
     height: 160px;
     border: none;
    
+}
+.sidebar{
+    position: relative;
 }
