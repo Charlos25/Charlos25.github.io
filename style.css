@@ -29,14 +29,12 @@ body{
     height: 200px;
 }
 .slader{
+    justify-items: center;
     height: 300px;
-    margin: 20px 20px 20px 20px;
-    
-    
+    margin: 20px 20px 20px 20px; 
 }
 .nav.navbar.navbar-expand-lg{
     background-color: var(--bs-tertiary-bg-rgb);
-   
 }
 
 .mapa-contenedor{
@@ -57,6 +55,13 @@ body{
 .contenedor-principal{
     display: grid;
 }
-.menu{
-    grid-template-columns: auto;
+
+.carousel-inner{
+    border-radius: 20px;
+    background-size: cover;
+    
+}
+.img-carrusel{
+    border-radius: 20px;
+    background-size: cover;
 }

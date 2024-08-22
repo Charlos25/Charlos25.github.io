@@ -14,7 +14,7 @@
 .header, .contenido, .widget-1, .widget-2, .footer{
     padding: 5px;
     border-radius: 15px;
-    box-shadow: 5px 5px 15px rgb(54, 59, 45);
+    box-shadow: 5px 5px 15px rgb(54, 59, 45) inset;
     
 }
 

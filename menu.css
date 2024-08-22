@@ -90,3 +90,7 @@ label{
 .sidebar{
     position: relative;
 }
+
+.menu{
+    grid-template-columns: auto;
+}
