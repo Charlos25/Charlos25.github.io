@@ -13,9 +13,10 @@ body{
     margin: auto;
 }
 .heard{
-    width: 1600px;
-    height: 200px;
-    border: solid black 20px;
+    max-width: 1500px;
+    width: auto;
+    height: auto;
+    border: solid black 2px;
     align-items: center;
     
 
@@ -28,7 +29,7 @@ body{
 }
 .slader{
     height: 300px;
-    position: absolute;
+    z-index: 2;
 }
 .nav.navbar.navbar-expand-lg{
     background-color: var(--bs-tertiary-bg-rgb);
@@ -48,4 +49,11 @@ body{
 }
 .nav.navbar.navbar-expand-lg.bg-body-tertiary{
     background-color: darkgreen;
+
+}
+.contenedor-principal{
+    display: grid;
+}
+.menu{
+    grid-template-columns: auto;
 }

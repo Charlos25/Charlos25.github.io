@@ -10,98 +10,68 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <input type="checkbox" id="check">
-  <label for="check">
-      <img src="./img/icono.png" alt="">
-  </label>
-  <nav class="nav">
-      <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Boyacá</a></li>
-          <li><a href="#">Cundinamarca</a></li>
-          <li><a href="#">Mapa Boyacá</a></li>
-          <li><a href="#">Mapa Cundinamarca</a></li>
-          <li>
-            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Zona</a>
-            <ul class="dropdown-menu">
-              <li><a href="boyaca.html">Boyacá</a></li>
-              <li><hr class="dropdown-divider">
-              <li><a href="cundinamarca.html">Cundinamarca</a></li>
-            
-          </li>
-            
-          </ul>
+  <div class="contenedor-principal">
+    <div class="menu">
+    <input type="checkbox" id="check">
+    <label for="check">
+        <img src="./img/icono.png" alt="">
+    </label>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="boyaca.html">Boyacá</a></li>
+            <li><a href="cundinamarca.html">Cundinamarca</a></li>
+            <li><a href="#">Mapa Boyacá</a></li>
+            <li><a href="#">Mapa Cundinamarca</a></li>
+            <li>
+              <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Zona</a>
+              <ul class="dropdown-menu">
+                <li><a href="mapa.html">Boyacá</a></li>
+                <li><hr class="dropdown-divider">
+                <li><a href="cundinamarca.html">Cundinamarca</a></li>
+              
+            </li>
+              
+            </ul>
 
-      </ul>
-  </nav>
+        </ul>
+    </nav>
+    </div>
 
-  <heard class="heard">
-    <img class="baner" src="./img/baner2.png" alt="">
- </heard>
+    <heard class="heard">
+      <img class="baner" src="../img/baner.png" alt="">
+  </heard>
 
- <h1 style="color: rgb(62, 86, 0);"><center>Biodiversidad Boyacá y Cundinamarca..</center></h1>
-    <div class="contenedor">
-
-
+  <h1 style="color: rgb(62, 86, 0);"><center>Biodiversidad Boyacá y Cundinamarca..</center></h1>
+      <div class="contenedor">
 
 
-        <!-- <div class="menu">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="/">Inicio</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+
+
+          <div class="slader">
+              <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="./img/carrusel1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./img/carrusel2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./img/carrusel3.png" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                   </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="navbar-brand" aria-current="page" href="mapa.html">Mapa</a>
-                      </li>
-                      
-                      <li class="nav-item dropdown">
-                        <a class="navbar-brand" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Zona
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="boyaca.html">Boyacá</a></li>
-                          <li><a class="dropdown-item" href="cundinamarca.html">Cundinamarca</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          
-                        </ul>
-                      </li>
-                      
-                    </ul>
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                  </div>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
-              </nav>
-        </div> -->
-        <div class="slader">
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="./img/carrusel1.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./img/carrusel2.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="./img/carrusel3.png" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </div>
+          </div>
+      </div>
     </div>
 </body>
 </html>
