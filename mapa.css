@@ -5,6 +5,7 @@ body, html {
     /* background-color: #f4f4f4; */
 }
 
+
 .map-container {
     position: relative;
     width: 100%;
@@ -46,3 +47,26 @@ body, html {
     z-index: 10;
     max-width: 200px;
 }
+
+.contenido-mapa{
+    display: flex;
+    grid-template-rows: 1fr;
+    width: 100%;
+
+
+
+    
+}
+
+.ifr-mapa{
+    width: auto;
+    height: auto;
+    
+   
+}
+iframe{
+    width: 1200px;
+    height: 800px;
+}
+
+
