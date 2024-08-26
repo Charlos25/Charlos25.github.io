@@ -53,9 +53,11 @@
 }
 
 .footer{
-    background-color: blue;
+    background-color: rgba(35, 245, 24, 0.5);
     grid-column: 1 / 4;
     grid-row: 4 / 5;
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
 }
 .baner{
     border-radius: 15px;
@@ -75,8 +77,44 @@
     align-items: center;
     margin-bottom: 30px;
     font-size: small;
+<<<<<<< HEAD
     
 }
 p{
     padding: 20px;
 }
+=======
+}
+p{
+    padding: 15px;
+}
+.redes, .info{
+    height: 200px;
+    padding: 5px;
+}
+.redes{
+    grid-column: 1 / 2;
+    grid-row: auto;
+    align-content: center;
+    margin: auto;
+}
+
+.info{
+    grid-column: 2 / 4;
+    grid-row: auto;
+}
+
+.footer-redes{
+    list-style: none;
+}
+.vinculo {
+    text-decoration: none;
+    color:black
+}
+
+.bi{
+    color: black !important;
+    font-size: 30px !important;
+}
+
+>>>>>>> 238343bc28b7aacccc87ae34089dfd7786e91144
