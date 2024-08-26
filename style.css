@@ -26,11 +26,12 @@ body{
     width: 100%;
     max-width: 1600px;
     margin: auto;
-    height: 200px;
+    height: auto;
+    object-fit: contain;
 }
 .slader{
     justify-items: center;
-    height: 300px;
+    height: auto;
     margin: 20px 20px 20px 20px; 
 }
 .nav.navbar.navbar-expand-lg{

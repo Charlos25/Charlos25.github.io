@@ -77,6 +77,13 @@
     align-items: center;
     margin-bottom: 30px;
     font-size: small;
+<<<<<<< HEAD
+    
+}
+p{
+    padding: 20px;
+}
+=======
 }
 p{
     padding: 15px;
@@ -110,3 +117,4 @@ p{
     font-size: 30px !important;
 }
 
+>>>>>>> 238343bc28b7aacccc87ae34089dfd7786e91144

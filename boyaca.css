@@ -4,6 +4,12 @@ body{
     box-sizing: border-box;
 
 }
+
+.container-tarjetas{
+    display: flex !important;
+}
+
+
 .wrap{
     width: 1150px;
     margin: 50px auto;
