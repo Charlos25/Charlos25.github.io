@@ -1,0 +1,96 @@
+*{
+margin: 0;
+padding: 0;
+
+}
+
+.body-menu{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-image: url(./img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+
+}
+
+.menu-a{
+    text-decoration: none;
+    color: aliceblue;
+
+    
+}
+
+.lista-menu{
+
+    list-style: none;
+    top: 70px;
+    position: absolute;
+    width: 100%;
+
+}
+
+img{
+    width: 40px;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+nav{
+    background-color: rgba(231, 250, 229, 0.9);
+    width: 350px;
+    height: 100%;
+    left: -6000px;
+    position: absolute;
+    transition: all 0s;
+    z-index: 0;
+    border-radius: 20px;
+}
+
+input[type="checkbox"]:checked ~ nav
+{ 
+    transform: translateX(6000px);
+
+}
+
+.menu-a{
+    display: block;
+    padding: 20px 5px ;
+    font-size: 18px;
+    color: rgb(1, 59, 1);
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.menu-a:hover{
+    background-color: rgb(250, 147, 79,0.5);
+    color: black;
+    font-size: 20px;
+    padding: 25px 7px ;
+}
+label{
+
+    padding: 15px;
+    position: absolute;
+    position: relative;
+    z-index: 1;
+
+}
+
+.dropdown-menu{
+    background-color: rgba(231, 250, 229, 0.9);;
+    width: 350px;
+    height: 160px;
+    border: none;
+   
+}
+.sidebar{
+    position: relative;
+}
+
+.menu{
+    grid-template-columns: auto;
+}

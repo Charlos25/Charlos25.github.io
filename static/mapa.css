@@ -1,0 +1,74 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+}
+
+
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px; /* Ancho máximo del mapa */
+    margin: 0 auto;
+    box-shadow: black;
+    background-color: white;
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.marker {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #06371f;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.marker:hover {
+    background-color: #FF3D00;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none; /* Se muestra al pasar el mouse sobre un marcador */
+    pointer-events: none;
+    z-index: 10;
+    max-width: 200px;
+}
+
+.contenido-mapa{
+    display: flex;
+    grid-template-rows: 1fr;
+    width: 100%;
+    justify-content: center;
+
+
+
+    
+}
+
+.ifr-mapa{
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    
+   
+}
+iframe{
+    width: 1200px;
+    height: 800px;
+}
+
+
