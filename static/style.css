@@ -1,0 +1,68 @@
+@import "boyaca.css";
+@import "mapa.css";
+@import "menu.css";
+@import "grid.css";
+body{
+    background-color: rgb(228, 243, 218);
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.contenedor{
+    /* border: solid red 1px; */
+    width: 80%;
+    margin: auto;
+}
+.heard{
+    max-width: 1500px;
+    width: auto;
+    height: auto;
+    border: solid black 2px;
+    align-items: center;
+    
+
+}
+.baner{
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    height: auto;
+    object-fit: contain;
+}
+.slader{
+    justify-items: center;
+    height: auto;
+    margin: 20px 20px 20px 20px; 
+}
+.nav.navbar.navbar-expand-lg{
+    background-color: var(--bs-tertiary-bg-rgb);
+}
+
+.mapa-contenedor{
+    width: 600px;
+    height: 100vh;
+    background-color: white;
+    background-image: url(img/mapacolombia.png);
+    background-size: cover;
+    margin: auto;
+
+    /* border: solid red 1px; */
+        ;
+}
+.nav.navbar.navbar-expand-lg.bg-body-tertiary{
+    background-color: darkgreen;
+
+}
+.contenedor-principal{
+    display: grid;
+}
+
+.carousel-inner{
+    border-radius: 20px;
+    background-size: cover;
+    
+}
+.img-carrusel{
+    border-radius: 20px;
+    background-size: cover;
+}
