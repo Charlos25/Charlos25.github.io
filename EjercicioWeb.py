@@ -8,7 +8,7 @@ app=Flask(__name__)
 def index():
     df=pd.read_csv("observacionEspecies.csv")
     data_dict=df.to_dict(orient="records")  # varialbel data_dicc asignar el csv a un diccionario
-    return render_template("dashboardBoy.html", data=data_dict)
+    return render_template("index.html", data=data_dict)
 
 
 if __name__ =="__main__":

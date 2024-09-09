@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+
+        table{
+            width: 50%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+        th, td{
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th{
+            background-color: beige;
+        }
+
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .card {
+            background-color: #054e86;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 200px;
+            color: white;
+        }
+        .chart-container {
+            width: 600px;
+            height: 400px;
+            margin: 20px auto;
+        }
+    </style>
+    <title>Dashboard y Tabla</title>
+</head>
+<body>
+
+    <h1>Dashboard</h1>
+    
+    
+
+    <div class="dashboard">
+        <div class="card">
+            <h3>Total de Especies</h3>
+            <p id="totalEspecies">{{ total_especies }}</p>
+        </div>
+        <div class="card">
+            <h3>Total de Observaciones</h3>
+            <p id="totalObservaciones">{{ total_observaciones }}</p>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="especiesPorPais"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="observacionesPorPais"></canvas>
+    </div>
+
+    <h2>Datos de la Tabla</h2>
+
+    <table>
+        <thead>
+            <tr>
+
+                <th>País</th>
+                <th>Organización</th>
+                <th>Observaciones</th>
+                <th>Especies</th>
+
+            </tr>
+            
+        </thead>
+        <tbody>
+        {% for record in data %}
+
+            <tr>
+
+                <td>{{ record['País'] }}</td>
+                <td>{{ record['Organización'] }}</td>
+                <td>{{ record['Observaciones'] }}</td>
+                <td>{{ record['Especies'] }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        // Calcula el total de especies y observaciones
+        let totalEspecies = 0;
+        let totalObservaciones = 0;
+        {% for record in data %}
+            totalEspecies += parseInt("{{ record['Especies'] }}") || 0;
+            totalObservaciones += parseInt("{{ record['Observaciones'] }}") || 0;
+        {% endfor %}
+        document.getElementById('totalEspecies').textContent = totalEspecies;
+        document.getElementById('totalObservaciones').textContent = totalObservaciones;
+
+        // Prepara los datos para los gráficos
+        const paises = [];
+        const especies = [];
+        const observaciones = [];
+        {% for record in data %}
+            paises.push("{{ record['País'] }}");
+            especies.push(parseInt("{{ record['Especies'] }}") || 0);
+            observaciones.push(parseInt("{{ record['Observaciones'] }}") || 0);
+        {% endfor %}
+
+        // Crea el gráfico de especies por país
+        new Chart(document.getElementById('especiesPorPais'), {
+            type: 'bar',
+            data: {
+                labels: paises,
+                datasets: [{
+                    label: 'Especies por País',
+                    data: especies,
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Crea el gráfico de observaciones por país
+        new Chart(document.getElementById('observacionesPorPais'), {
+            type: 'bar',
+            data: {
+                labels: paises,
+                datasets: [{
+                    label: 'Observaciones por País',
+                    data: observaciones,
+                    backgroundColor: 'rgba(255, 159, 64, 0.6)'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
