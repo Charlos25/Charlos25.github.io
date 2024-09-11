@@ -6,10 +6,41 @@ app=Flask(__name__)
 @app.route('/')
 
 def index():
-    df=pd.read_csv("observacionEspecies.csv")
-    data_dict=df.to_dict(orient="records")  # varialbel data_dicc asignar el csv a un diccionario
-    return render_template("index.html", data=data_dict)
+    return render_template('index.html')
 
+@app.route('/D_Boyaca.html')
+
+def D_Boyaca():
+    df=pd.read_csv("agrupado_boyaca.csv")
+    data_dict=df.to_dict(orient="records")  # varialbel data_dicc asignar el csv a un diccionario
+    return render_template("D_Boyaca.html", data=data_dict)
+
+@app.route('/D_Cundi.html')
+
+def D_Cundi():
+    df=pd.read_csv("agrupado_cundinamarca.csv")
+    data_dict=df.to_dict(orient="records")  # varialbel data_dicc asignar el csv a un diccionario
+    return render_template("D_Cundi.html", data=data_dict)
+
+@app.route('/boyaca.html')
+
+def boyaca():
+    return render_template('boyaca.html')
+
+@app.route('/cundinamarca.html')
+
+def cundinamarca():
+    return render_template('cundinamarca.html')
+
+@app.route('/mapa_boyaca.html')
+
+def mapa_boyaca():
+    return render_template('mapa_boyaca.html')
+
+@app.route('/mapacund.html')
+
+def mapacund():
+    return render_template('mapacund.html')
 
 if __name__ =="__main__":
     app.run(debug=True)

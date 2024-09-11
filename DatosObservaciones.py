@@ -35,9 +35,9 @@ for data in data_container:
             data_row4 = rows[3].text.strip()
             #print(data_row3)
             # data_rows1.append(data_row1) 
-            data_valor1.append(data_row2.replace('.', '')) 
+            data_valor1.append(data_row2.replace('.', '').replace('-','0')) 
             # data_rows2.append(data_row3)
-            data_valor2.append(data_row4.replace('.', ''))
+            data_valor2.append(data_row4.replace('.', '').replace('-','0'))
 
 
     
@@ -47,11 +47,21 @@ for data in data_container:
 
 df=pd.DataFrame({
     'País':dato_pais,
-    'Organización':dato_name,
+    # 'Organización':dato_name,
     'Observaciones':data_valor1,
     'Especies':data_valor2,
 })
 
-print(df)
+agrupado=df
 
-df.to_csv('observacionEspecies.csv', index=False)
+# print(df)
+agrupado["Especies"] = agrupado["Especies"].astype(int, errors="raise")
+agrupado["Observaciones"] = agrupado["Observaciones"].astype(int, errors="raise")
+# agrupado = agrupado.drop ('Organización', axis = 1)
+agrupado=df.groupby('País').sum()
+print(agrupado.head())
+
+
+
+# df.to_csv('observacionEspecies_cundinamarca.csv', index=False)
+agrupado.to_csv('agrupado_boyaca.csv', index=True)
