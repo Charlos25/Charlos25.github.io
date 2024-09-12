@@ -1,4 +1,4 @@
-from flask import Flask, render_template 
+from flask import Flask, render_template, jsonify
 import pandas as pd
 
 app=Flask(__name__)
@@ -14,6 +14,20 @@ def D_Boyaca():
     df=pd.read_csv("agrupado_boyaca.csv")
     data_dict=df.to_dict(orient="records")  # varialbel data_dicc asignar el csv a un diccionario
     return render_template("D_Boyaca.html", data=data_dict)
+
+@app.route('/data')
+
+def data():
+    # Leer los datos desde el archivo CSV
+    df2=pd.read_csv('agrupado_boyaca.csv')
+
+    # Convertir las columnas a listas
+    data = {
+            'labels': df2['País'].tolist(),    # Etiquetas de la torta (Categorías)
+            'values': df2['Especies'].tolist()      # Valores (Cantidad)
+    }
+
+    return jsonify(data)
 
 @app.route('/D_Cundi.html')
 

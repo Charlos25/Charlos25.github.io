@@ -2,6 +2,7 @@
 @import "mapa.css";
 @import "menu.css";
 @import "grid.css";
+@import "tablas.css";
 body{
     background-color: rgb(228, 243, 218);
     margin: 0px;
