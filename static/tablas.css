@@ -1,0 +1,20 @@
+.tabla_boyaca, .tabla_cundi{
+    border: solid 1px green;
+    margin: 20px;
+
+}
+
+.container_tabla{
+
+}
+
+.container_grafico{
+    width: 600px;
+    margin: auto;
+    
+}
+
+.container_grafico:hover{
+    box-shadow: 15px 15px 5 black;
+    
+}

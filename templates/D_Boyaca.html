@@ -82,11 +82,19 @@
             <div class="chart-container">
                 <canvas id="observacionesPorPais"></canvas>
             </div>
+
+            <div class="container_grafico shadow p-3 mb-5 bg-body rounded">
+                <h1>Cantidad de Especies Por País</h1>
+                <canvas id="grafico"></canvas> <!-- Canvas para el gráfico -->
+
+                <script src={{ url_for('static', filename='scripts.js') }}></script> <!-- Archivo JS -->
+
+            </div>
         
             <h2 class="titulo">Datos de la Tabla</h2>
             <hr>
-        
-            <table id="tablax">
+        <div class="container">
+            <table class="table-primary table-hover tabla_boyaca" id="tablax">
                 <thead>
                     <tr>
         
@@ -112,6 +120,9 @@
                 {% endfor %}
                 </tbody>
             </table>
+
+        </div>
+
         
             <script>
                 // Calcula el total de especies y observaciones
@@ -177,6 +188,8 @@
                 });
             </script>
         
+            
+
         </main>
         <div class="sidebar">
             <h1></h1>
