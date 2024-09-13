@@ -4,7 +4,12 @@
 @import "grid.css";
 @import "tablas.css";
 body{
-    background-color: rgb(228, 243, 218);
+    /* background-color: rgb(228, 243, 218); */
+    background-image: url("./img/fondoPagina.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;

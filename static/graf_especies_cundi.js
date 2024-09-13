@@ -30,7 +30,7 @@ var grafico1 = new Chart(ctx, {
 
 // Función para obtener datos del servidor y actualizar el gráfico
 function actualizarGrafico() {
-    fetch('/data')  // Solicita los datos al servidor
+    fetch('/data2')  // Solicita los datos al servidor
         .then(response => response.json())
         .then(data => {
             // Actualizar los datos del gráfico

@@ -41,6 +41,32 @@ def data1():
 
     return jsonify(data1)
 
+@app.route('/data2')
+
+def data2():
+    
+    df2=pd.read_csv('agrupado_cundinamarca.csv')# Leer los datos desde el archivo CSV
+    # Convertir las columnas a listas
+    data2 = {
+            'labels': df2['País'].tolist(),    # Etiquetas de la torta (Categorías)
+            'values': df2['Especies'].tolist()      # Valores (Cantidad)
+    }
+
+    return jsonify(data2)
+
+@app.route('/data3')
+
+def data3():
+    
+    df3=pd.read_csv('agrupado_cundinamarca.csv')# Leer los datos desde el archivo CSV
+    # Convertir las columnas a listas
+    data3 = {
+            'labels': df3['País'].tolist(),    # Etiquetas de la torta (Categorías)
+            'values': df3['Observaciones'].tolist()      # Valores (Cantidad)
+    }
+
+    return jsonify(data3)
+
 @app.route('/D_Cundi.html')
 
 def D_Cundi():

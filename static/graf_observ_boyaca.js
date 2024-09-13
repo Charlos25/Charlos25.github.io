@@ -1,6 +1,6 @@
 // Crear el gráfico inicial en el canvas con Chart.js
 var ctx = document.getElementById('grafico2').getContext('2d');
-var grafico = new Chart(ctx, {
+var grafico2 = new Chart(ctx, {
     type: 'pie', // Tipo de gráfico: 'pie' (torta)
     data: {
         labels: [], // Etiquetas vacías inicialmente
@@ -32,9 +32,9 @@ function actualizarGrafico() {
         .then(response => response.json())
         .then(data => {
             // Actualizar los datos del gráfico
-            grafico.data.labels = data.labels;  // Actualizar las etiquetas
-            grafico.data.datasets[0].data = data.values;  // Actualizar los valores
-            grafico.update();  // Refrescar el gráfico
+            grafico2.data.labels = data.labels;  // Actualizar las etiquetas
+            grafico2.data.datasets[0].data = data.values;  // Actualizar los valores
+            grafico2.update();  // Refrescar el gráfico
         });
 }
 
