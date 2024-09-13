@@ -18,9 +18,8 @@ def D_Boyaca():
 @app.route('/data')
 
 def data():
-    # Leer los datos desde el archivo CSV
-    df2=pd.read_csv('agrupado_boyaca.csv')
-
+    
+    df2=pd.read_csv('agrupado_boyaca.csv')# Leer los datos desde el archivo CSV
     # Convertir las columnas a listas
     data = {
             'labels': df2['País'].tolist(),    # Etiquetas de la torta (Categorías)
@@ -28,6 +27,19 @@ def data():
     }
 
     return jsonify(data)
+
+@app.route('/data1')
+
+def data1():
+    
+    df3=pd.read_csv('agrupado_boyaca.csv')# Leer los datos desde el archivo CSV
+    # Convertir las columnas a listas
+    data1 = {
+            'labels': df3['País'].tolist(),    # Etiquetas de la torta (Categorías)
+            'values': df3['Observaciones'].tolist()      # Valores (Cantidad)
+    }
+
+    return jsonify(data1)
 
 @app.route('/D_Cundi.html')
 

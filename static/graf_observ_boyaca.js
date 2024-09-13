@@ -1,5 +1,5 @@
 // Crear el gráfico inicial en el canvas con Chart.js
-var ctx = document.getElementById('grafico').getContext('2d');
+var ctx = document.getElementById('grafico2').getContext('2d');
 var grafico = new Chart(ctx, {
     type: 'pie', // Tipo de gráfico: 'pie' (torta)
     data: {
@@ -28,7 +28,7 @@ var grafico = new Chart(ctx, {
 
 // Función para obtener datos del servidor y actualizar el gráfico
 function actualizarGrafico() {
-    fetch('/data')  // Solicita los datos al servidor
+    fetch('/data1')  // Solicita los datos al servidor
         .then(response => response.json())
         .then(data => {
             // Actualizar los datos del gráfico
